@@ -1,0 +1,17 @@
+{
+  "run_in_loop": false,
+  "interval_in_seconds": 60,
+
+  "alive_check": true,
+  "hour_of_alive_check": 15,
+
+  "limit_date": "2024-01-01",
+  "start_date": "2024-01-01",
+  "limit": "15",
+  "url": "url (see README.md)",
+
+  "pushover_credentials": {
+    "api_token": "token",
+    "user_key": "key"
+  }
+}
