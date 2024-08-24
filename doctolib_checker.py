@@ -67,9 +67,6 @@ def format_string_to_date(date):
 
 def main():
     print("Starting...")
-    send_pushover_notification(
-        f"Doctolib script started. \nLooking for appointments up to {limit_date}"
-    )
 
     while config["run_in_loop"]:
         try:
