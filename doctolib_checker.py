@@ -4,9 +4,10 @@ import time
 import datetime
 import http.client
 import urllib.request
+import pathlib
 
 # load config.json
-config = json.load(open("config.json"))
+config = json.load(open(f"{pathlib.Path(__file__).parent.resolve()}/config.json"))
 
 # yyyy-mm-dd
 limit_date = config["limit_date"]
