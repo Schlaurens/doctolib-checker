@@ -69,7 +69,7 @@ def format_string_to_date(date):
 def main():
     print("Starting...")
 
-    while config["run_in_loop"]:
+    while True:
         try:
             req = urllib.request.Request(url, headers={"User-Agent": "Magic Browser"})
             con = urllib.request.urlopen(req)
@@ -100,7 +100,11 @@ def main():
                 send_pushover_notification(
                     f"Doctolib script is still running. \nLooking for appointments up to {limit_date}"
                 )
-            time.sleep(config["interval_in_seconds"])
+                
+            if config["run_in_loop"]:
+                time.sleep(config["interval_in_seconds"])
+            else: 
+                break
 
         except Exception as e:
             send_pushover_notification(
