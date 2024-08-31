@@ -100,10 +100,10 @@ def main():
                 send_pushover_notification(
                     f"Doctolib script is still running. \nLooking for appointments up to {limit_date}"
                 )
-                
+
             if config["run_in_loop"]:
                 time.sleep(config["interval_in_seconds"])
-            else: 
+            else:
                 break
 
         except Exception as e:
