@@ -20,7 +20,7 @@ start_date = config["start_date"]
 limit = config["limit"]
 
 # the url to fetch the data from. The start_date and limit will be replaced by the actual values
-url = config["url"] % {"start_date": start_date, "limit": limit}
+url = config["url"].format_map({"start_date": start_date, "limit": limit})
 
 
 def send_pushover_notification(message):
