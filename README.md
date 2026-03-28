@@ -19,7 +19,7 @@ Furthermore, you will need to do some changes in the `config.yaml` for this scri
   - Then you go to the network monitor (Ctrl + Shift + E) and reload the page
   - Once you have done that you click on the last GET-Request and look to the right side of your window
   - Here you have to copy the URL of the GET-Request and paste it into the config file.
-  - Then you prepare the link for formatting by replacing the part that looks like `start_date=2024-01-01&limit=15` with `start_date=%(start_date)s&limit=%(limit)s`.
+  - Then you prepare the link for formatting by replacing the part that looks like `start_date=2024-01-01&limit=15` with `start_date={start_date}&limit={limit}`.
 - `pushover_credentials` are the credentials needed in order to send push notifications to your device in case a free appointment has been found. Take a look at the [Pushover API Documentation](https://pushover.net/api) to know what's what.
 
 That was the setup. It is not as complicated as it looks ;) Have fun!
